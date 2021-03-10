@@ -14,10 +14,12 @@
 <body style="background-color:black;" data-new-gr-c-s-check-loaded="14.980.0" data-gr-ext-installed="">
 
 	<main class="svelte-16wde2k">
-		<p><a href="https://www.youtube.com/redirect?q=https://bmaltais.github.io/"><img style="display:none"
-					id="img1" src="logos/fullscreen.jpg" alt="GO FULL SCREEN" class="svelte-16wde2k"></a></p>
+		<p><a href="https://www.youtube.com/redirect?q=https://bmaltais.github.io/"><img style="display:none" id="img1"
+					src="logos/fullscreen.jpg" alt="GO FULL SCREEN" class="svelte-16wde2k"></a></p>
 		<p></p>
-		<p><a href="https://www.crave.ca/en"><img src="logos/crave.png" alt="Crave" align="middle" hspace="20"
+		<p><a href="https://www.primevideo.com"><img src="logos/prime.svg" alt="Amazon Prime" align="middle" hspace="20"
+					vspace="10" class="svelte-16wde2k"></a>
+			<a href="https://www.crave.ca/en"><img src="logos/crave.png" alt="Crave" align="middle" hspace="20"
 					vspace="10" class="svelte-16wde2k"></a>
 			<a href="https://www.disneyplus.com/fr-ca/login"><img src="logos/disney.svg" alt="Disney+" align="middle"
 					hspace="20" vspace="10" class="svelte-16wde2k"></a>
@@ -34,7 +36,7 @@
 			<a href="https://tubitv.com/"><img src="logos/tubitv.gif" alt="Tubi TV" align="middle" hspace="20"
 					vspace="10" class="svelte-16wde2k"></a>
 			<a href="https://www.qub.ca/tvaplus"><img src="logos/tvaplus.svg" alt="Twitch" align="middle" hspace="20"
-							vspace="10" class="svelte-16wde2k"></a>
+					vspace="10" class="svelte-16wde2k"></a>
 			<a href="https://www.twitch.com"><img src="logos/twitch.png" alt="Twitch" align="middle" hspace="20"
 					vspace="10" class="svelte-16wde2k"></a>
 			<a href="https://tv.virginmobile.ca/"><img src="logos/virginmobile.svg" alt="Twitch" align="middle"
@@ -43,6 +45,7 @@
 					vspace="10" class="svelte-16wde2k"></a>
 		</p>
 		<p id="demo1"></p>
+		<p id="agent"></p>
 
 		<script>
 			var w = window.innerWidth
@@ -53,10 +56,19 @@
 				|| document.documentElement.clientHeight
 				|| document.body.clientHeight;
 
+			var x = navigator.userAgent;
+			var url = window.location.href;
+
 			document.getElementById("demo1").innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+			document.getElementById("agent").innerHTML = "User-agent header sent: " + x;
 
 			if (w >= 1130) {
 				document.getElementById("img1").style.display = "inline";
+				// Test if this is running locally on a PC for testing
+				//if( !url.includes('file://') ) {
+				// Simulate an HTTP redirect:
+				//	window.location.replace("https://www.youtube.com/redirect?q=" + url + "/");
+				//}
 			}
 		</script>
 	</main>
