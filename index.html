@@ -27,6 +27,8 @@
 					vspace="10" class="svelte-16wde2k"></a>
 			<a href="https://netflix.com/"><img src="logos/netflix.png" alt="Tubi TV" align="middle" hspace="20"
 					vspace="10" class="svelte-16wde2k"></a>
+			<a href="https://noovo.ca/"><img src="logos/noovo.png" alt="Tubi TV" align="middle" hspace="20" vspace="10"
+					class="svelte-16wde2k"></a>
 			<a href="https://www.paramountplus.com/ca/"><img src="logos/paramountplus.png" alt="Paramount+"
 					align="middle" hspace="20" vspace="10" class="svelte-16wde2k"></a>
 			<a href="https://www.primevideo.com"><img src="logos/prime.svg" alt="Amazon Prime" align="middle"
@@ -58,7 +60,8 @@
 			var x = navigator.userAgent;
 			var url = window.location.href;
 
-			document.getElementById("demo1").innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+
+			// document.getElementById("demo1").innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
 			// document.getElementById("agent").innerHTML = "User-agent header sent: " + x;
 
 			// Test if screes resolution is larger than 1130. Tesla full screen resolution is reported as w: 1111 h: 694
@@ -70,12 +73,11 @@
 					// Simulate an HTTP redirect:
 					//	window.location.replace("https://www.youtube.com/redirect?q=" + url + "/");
 					// Change image property fron none to inline so it is displayed
-					document.getElementById("agent").innerHTML = "Running in a Tesla Browser";
-				//	document.getElementById("img1").style.display = "inline";
+					//document.getElementById("agent").innerHTML = "Running in a Tesla Browser";
+					//	document.getElementById("img1").style.display = "inline";
 				}
-				else
-				{
-					document.getElementById("agent").innerHTML = "Running in a Generic Browser";
+				else {
+					//document.getElementById("agent").innerHTML = "Running in a Generic Browser";
 				}
 			}
 		</script>
