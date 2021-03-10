@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-	color: #333;
+	color: rgb(187, 184, 184);
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
@@ -62,3 +62,22 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+main.svelte-16wde2k.svelte-16wde2k {
+    text-align:center;
+    padding:1em;
+    max-width:240px;
+    margin:0 auto
+}
+
+img.svelte-16wde2k.svelte-16wde2k {
+    width:20%;
+    height:auto
+}
+
+.img-small.svelte-16wde2k.svelte-16wde2k, .img-small.svelte-16wde2k img.svelte-16wde2k {
+    width:10%;
+    height:auto
+}
+
+@media(min-width: 640px){main.svelte-16wde2k.svelte-16wde2k{max-width:none}}
